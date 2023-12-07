@@ -1,0 +1,97 @@
+.section-platform {
+  padding-block: 120px;
+
+  @include responsive(md) {
+    padding-block: 60px;
+  }
+
+  .container {
+    &-platform {
+      flex-direction: column;
+      gap: 80px;
+
+      @include responsive(sm) {
+        gap: 40px;
+      }
+
+      .content {
+        &-top {
+          @include flex(row, flex-end, space-between);
+
+          @include responsive(md) {
+            @include flex(column, flex-start, space-between);
+            gap: 32px;
+          }
+
+          @include  responsive(sm) {
+            gap: 24px;
+          }
+
+          .subtext {
+            &-text {
+              &-display {
+                margin-top: 10px;
+              }
+            }
+
+            &-image {
+              max-width: 400px;
+
+              @include responsive(xl) {
+                max-width: 300px;
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          @include flex(row, null, flex-start);
+          gap: 150px;
+
+          @include responsive(xl) {
+            gap: 32px;
+          }
+
+          @include responsive(md) {
+            flex-wrap: wrap;
+          }
+
+          @include responsive(sm) {
+            gap: 24px;
+          }
+
+          .card {
+            @include flex(column, flex-start, null);
+            gap: 40px;
+
+            @include responsive(md) {
+              gap: 24px;
+            }
+
+            &-ic {
+              @include flex(row, center, flex-start);
+              gap: 16px;
+
+              img {
+                max-width: 64px;
+
+                @include responsive(xl) {
+                  max-width: 48px;
+                }
+              }
+            }
+
+            &-text {
+              &-desc {
+                color: $subtext-black-secondary;
+                font-size: 16px;
+                max-width: 290px;
+                margin-top: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

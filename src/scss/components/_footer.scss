@@ -1,0 +1,67 @@
+.footer {
+  background-color: $gray;
+  padding-top: 200px;
+
+  @include responsive(md) {
+    padding-top: 100px;
+  }
+  
+  .container {
+    &-footer {
+      flex-direction: column;
+      
+      .content {
+        &-top {
+          padding-bottom: 120px;
+          @include flex(column, null, space-between);
+          gap: 22px;
+
+          @include responsive(md) {
+            padding-bottom: 60px;
+          }
+
+          .menu {
+            &-item {
+              @include flex(row, center, space-between);
+              padding-bottom: 22px;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+            }
+          }
+        }
+
+        &-bottom {
+          padding: 30px 70px;
+          @include flex(row, center, space-between);
+
+          @include responsive(md) {
+            padding: 20px 40px;
+          }
+
+          @include responsive(sm) {
+            @include flex(column, center, space-between);
+            gap: 32px;
+          }
+          .social-media {
+            @include flex(row, center, space-between);
+            gap: 64px;
+
+            @include responsive(xl) {
+              gap: 32px;
+            }
+          }
+          .nav-logo {
+            display: inline-flex;
+
+            img {
+              max-width: 125px;
+
+              @include responsive(md) {
+                max-width: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

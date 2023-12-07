@@ -1,0 +1,136 @@
+.section-theTeam {
+  padding-block: 120px;
+
+  @include responsive(md) {
+    padding-block: 60px;
+  }
+
+  .container {
+    &-theTeam {
+      flex-direction: column;
+      gap: 80px;
+
+      @include responsive(sm) {
+        gap: 40px;
+      }
+
+      .content {
+        &-top {
+          @include flex(column, null, space-between);
+          gap: 24px;
+
+          .subtext {
+            @include flex(column, null, space-between);
+            gap: 10px;
+
+            &-text {
+              @include flex(row, center, space-between);
+
+              @include responsive(md) {
+                @include flex(column, flex-start, space-between);
+                gap: 24px;
+              }
+
+              .wrap {
+                @include flex(row, center, space-between);
+                gap: 24px;
+
+                @include responsive(md) {
+                  width: 100%;
+                }
+              }
+            }
+
+          }
+
+          .wrapper {
+            @include flex(row, center, space-between);
+
+            @include responsive(md) {
+              justify-content: flex-start;
+              flex-wrap: wrap;
+              gap: 24px;
+            }
+          }
+        }
+
+        &-bottom {
+          overflow: hidden;
+
+          .slick-track {
+            @include flex(row, null, null);
+            overflow: hidden;
+            gap: 40px;
+
+            @include responsive(sm) {
+              gap: 20px;
+            }
+          }
+
+          .slide {
+            @include flex(column, center, null);
+            width: 290px;
+            background-color: #CDDDED;
+            overflow: hidden;
+            transition: all 300ms ease;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+              width: 620px;
+
+              @include responsive(sm) {
+                width: 100%;
+              }
+
+              .slide-text {
+                bottom: 0;
+              }
+            }
+
+            &-image {
+              width: 426px;
+              height: 460px;
+
+              @include responsive(sm) {
+                width: 375px;
+                height: 100%;
+              }
+            }
+
+            &-text {
+              @include flex(row, center, space-between);
+              padding: 26px 40px;
+              background-color: rgba(255, 255, 255, 0.80);
+              backdrop-filter: blur(10px);
+              position: absolute;
+              bottom: -100%;
+              left: 0;
+              right: 0;
+              transition: all 300ms ease;
+
+              @include responsive(sm) {
+                flex-direction: column;
+              }
+
+              &-name {
+                color: $subtext-black;
+              }
+
+              &-jobs {
+                color: $subtext-black;
+                font-family: $font-display;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 180%;
+                /* 28.8px */
+                letter-spacing: -0.32px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

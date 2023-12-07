@@ -1,0 +1,124 @@
+.section-feature {
+  padding-block: 120px;
+
+  @include responsive(md) {
+    padding-block: 60px;
+  }
+
+  .container {
+    &-feature {
+      flex-direction: column;
+      gap: 80px;
+
+      @include responsive(sm) {
+        gap: 40px;
+      }
+
+      .content {
+        &-top {
+          @include flex(column, center, center);
+          gap: 10px;
+
+          .subtext {
+            &-display {
+              max-width: 840px;
+              text-align: center;
+            }
+          }
+        }
+
+        &-bottom {
+          display: flex;
+
+          @include responsive(md) {
+            flex-direction: column;
+          }
+
+          &-left {
+            background-color: $gray;
+            padding: 80px 48px;
+            @include flex(column, flex-start, flex-start);
+            gap: 48px;
+
+            @include responsive(sm) {
+              padding: 40px 20px;
+              gap: 24px;
+            }
+
+            .item {
+              @include flex(column, flex-start, flex-start);
+              gap: 24px;
+
+              &-title {
+                @include flex(row, center, flex-start);
+                gap: 24px;
+
+                &-number {
+                  color: $white;
+                  font-family: $font-display;
+                  font-size: 24px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 150%;
+                  /* 36px */
+                  letter-spacing: -0.48px;
+                  padding: 14px 15px;
+                  border: 1px solid $white;
+                  border-radius: 50%;
+
+                  @include responsive(xl) {
+                    font-size: 20px;
+                    padding: 12px 13px;
+                  }
+
+                  @include responsive(md) {
+                    font-size: 16px;
+                  }
+                }
+
+                &-text {
+                  flex-shrink: 0;
+                }
+              }
+            }
+          }
+
+          &-right {
+            @include flex(column, flex-start, flex-start);
+            background-color: #F5F7FE;
+            padding: 80px 48px;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            @include responsive(sm) {
+              padding: 40px 20px;
+            }
+
+            .btn-primary {
+              padding-inline: 25px;
+
+              @include responsive(md) {
+                padding: 0;
+                color: $black;
+              }
+            }
+
+            .img-dashboard {
+              position: absolute;
+              left: 68px;
+              bottom: -206px;
+              width: 130%;
+
+              @include responsive(md) {
+                position: relative;
+                left: 0;
+                bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

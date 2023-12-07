@@ -1,0 +1,191 @@
+.section-pricing {
+  flex-direction: column;
+
+  .content {
+    .wrapper-top {
+      background-color: #0A0A0A;
+    }
+
+    &-top {
+      @include flex(column, flex-start, null);
+      gap: 10px;
+      padding-top: 120px;
+      padding-bottom: 250px;
+
+      @include responsive(md) {
+        padding-top: 60px;
+      }
+
+      .subtitle {
+        color: $subtext-white;
+      }
+
+      .subtext {
+        &-text {
+          @include flex(row, center, flex-start);
+          gap: 40px;
+
+          @include responsive(md) {
+            @include flex(column, flex-start, flex-start);
+            gap: 24px;
+          }
+
+          &-display {
+            color: $white;
+            max-width: 400px;
+
+            @include responsive(md) {
+              max-width: 100%;
+            }
+          }
+
+          &-desc {
+            max-width: 400px;
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      @include flex(row, flex-end, space-between);
+      gap: 40px;
+      margin-top: -300px;
+
+      @include responsive(md) {
+        @include flex(column, center, space-between);
+        gap: 60px;
+      }
+
+      @include responsive(xl) {
+        margin-top: -200px;
+      }
+
+      .card {
+        @include flex(column, null, null);
+        position: relative;
+
+        &-price {
+          @include flex(column, null, space-between);
+          gap: 24px;
+          background-color: $white;
+          padding: 100px 48px 48px;
+
+          @include responsive(xl) {
+            padding: 70px 32px 32px;
+          }
+
+          .price {
+            &-title {
+              color: $black;
+              margin-bottom: 8px;
+
+              @include responsive(xl) {
+                font-size: 26px;
+              }
+
+              span {
+                font-weight: 700;
+              }
+            }
+
+            &-desc {
+              font-size: 16px;
+              color: $subtext-black-secondary;
+            }
+          }
+        }
+
+        .feature {
+          @include flex(column, flex-start, space-between);
+          gap: 16px;
+
+          &-include {
+            @include flex(row, center, flex-start);
+            gap: 16px;
+
+            &-ic {
+              max-width: 32px;
+            }
+
+            &-text {
+              color: $subtext-black;
+
+              @include responsive(xl) {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        &-members {
+          @include flex(row, center, space-between);
+          padding: 30px 48px;
+          background-color: $black;
+
+          @include responsive(xl) {
+            padding: 20px 32px;
+          }
+
+          &-wrap {
+            @include flex(row, center, null);
+
+            img {
+              max-width: 40px;
+
+              &:not(:first-child) {
+                margin-left: -16px;
+              }
+            }
+
+            span {
+              color: #0A0A0A;
+              font-family: $font-display;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 180%;
+              /* 28.8px */
+              letter-spacing: -0.32px;
+              background-color: #F5F7FE;
+              padding: 5px 13px;
+              border-radius: 20px;
+              margin-left: -16px;
+            }
+          }
+        }
+
+        .img-card-decoration {
+          position: absolute;
+          top: -50px;
+          left: -30px;
+          max-width: 130px;
+          animation: rotate-animation 8s infinite linear;
+
+          @include responsive(xl) {
+            max-width: 104px;
+          }
+
+          @include responsive(md) {
+            max-width: 90px;
+          }
+
+          @include responsive(sm) {
+            top: -40px;
+            left: -16px;
+            max-width: 78px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,184 @@
+.section-header {
+  .wrapper {
+    background-color: $gray;
+  }
+
+  .container {
+    &-header {
+      &:nth-child(2) {
+        background-color: $white;
+      }
+
+      &.content {
+        &-top {
+          position: relative;
+          padding-top: 80px;
+
+          @include responsive(md) {
+            padding-top: 40px;
+          }
+
+          .subtext {
+            @include flex(column, null, space-between);
+            gap: 460px;
+            width: 100%;
+
+            @include responsive(xl) {
+              gap: 260px;
+            }
+
+            @include responsive(md) {
+              gap: 40px;
+            }
+
+            @include responsive(sm) {
+              gap: 24px;
+            }
+
+            &-text {
+              @include flex(row, center, space-between);
+
+              @include responsive(xl) {
+                gap: 40px;
+              }
+
+              @include responsive(md) {
+                @include flex(column, flex-start, space-between);
+              }
+
+              @include responsive(sm) {
+                gap: 24px;
+              }
+
+              &-display {
+                @include flex(column, flex-start, space-between);
+                gap: 16px;
+                flex-shrink: 0;
+                @include responsive(sm) {
+                  display: block;
+                }
+              }
+
+              &-desc {
+                max-width: 400px;
+                @include responsive(sm) {
+                  max-width: 100%;
+                }
+              }
+
+              .wrap-text {
+                @include flex(column, flex-start, space-between);
+                gap: 40px;
+
+                @include responsive(sm) {
+                  gap: 24px;
+                }
+              }
+            }
+
+            &-image {
+              @include responsive(md) {
+                display: none;
+              }
+              img {
+                max-width: 290px;
+
+                @include responsive(xl) {
+                  max-width: 240px;
+                }
+              }
+            }
+          }
+
+          .img-decoration-left {
+            position: absolute;
+            bottom: 255px;
+            left: -50px;
+            max-width: 284px;
+
+            @include responsive(xl) {
+              max-width: 214px;
+              bottom: 200px;
+            }
+            @include responsive(md) {
+              display: none;
+            }
+          }
+
+          .img-dashboard-right {
+            position: absolute;
+            right: -376px;
+            bottom: -351px;
+
+            @include responsive(xl) {
+              right: -270px;
+              bottom: -260px;
+            }
+
+            @include responsive(md) {
+              position: relative;
+              right: unset;
+              bottom: unset;
+            }
+          }
+        }
+
+        &-bottom {
+          flex-direction: column;
+          gap: 24px;
+          padding-block: 60px;
+
+          @include responsive(md) {
+            padding-block: 30px;
+          }
+
+          .subtext {
+            &-desc {
+              color: $black;
+              font-family: $font-display;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130%;
+              /* 31.2px */
+              letter-spacing: -0.48px;
+              max-width: 320px;
+
+              @include responsive(md) {
+                font-size: 20px;
+              }
+            }
+
+            &-text {
+              &-subtitle {
+                color: $black;
+                font-family: $font-display;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 180%;
+                /* 36px */
+                letter-spacing: -0.4px;
+
+                @include responsive(md) {
+                  font-size: 18px;
+                }
+              }
+
+              &-span {
+                color: $black;
+                font-family: $font-display;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 180%;
+                /* 28.8px */
+                letter-spacing: -0.32px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

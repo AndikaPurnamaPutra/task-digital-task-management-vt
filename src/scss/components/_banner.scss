@@ -1,0 +1,15 @@
+.section-banner {
+    .container {
+        &-banner {
+            justify-content: center;
+            margin-bottom: -80px;
+            @include responsive(md) {
+                margin-bottom: -60px;
+            }
+
+            @include responsive(sm) {
+                margin-bottom: -40px;
+            }
+        }
+    }
+}
