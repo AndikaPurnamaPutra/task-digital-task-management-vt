@@ -3,7 +3,7 @@
         &-banner {
             justify-content: center;
             margin-bottom: -80px;
-            @include responsive(md) {
+            @include responsive(lg) {
                 margin-bottom: -60px;
             }
 

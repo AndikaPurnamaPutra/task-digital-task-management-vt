@@ -1,7 +1,7 @@
 .section-platform {
   padding-block: 120px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 60px;
   }
 
@@ -18,12 +18,12 @@
         &-top {
           @include flex(row, flex-end, space-between);
 
-          @include responsive(md) {
+          @include responsive(lg) {
             @include flex(column, flex-start, space-between);
             gap: 32px;
           }
 
-          @include  responsive(sm) {
+          @include responsive(sm) {
             gap: 24px;
           }
 
@@ -52,7 +52,7 @@
             gap: 32px;
           }
 
-          @include responsive(md) {
+          @include responsive(lg) {
             flex-wrap: wrap;
           }
 
@@ -64,7 +64,7 @@
             @include flex(column, flex-start, null);
             gap: 40px;
 
-            @include responsive(md) {
+            @include responsive(lg) {
               gap: 24px;
             }
 

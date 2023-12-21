@@ -25,7 +25,7 @@
       border: 1px solid $primary;
     }
 
-    @include responsive(md) {
+    @include responsive(lg) {
       border-radius: unset;
       padding: 0;
       background-color: transparent;
@@ -63,7 +63,7 @@
       font-size: 70px;
     }
 
-    @include responsive(md) {
+    @include responsive(lg) {
       font-size: 48px;
       padding: 20px 20px 20px 40px;
       justify-content: space-between;
@@ -89,7 +89,7 @@
     border: 3px solid $primary;
     border-radius: 50%;
 
-    @include responsive(md) {
+    @include responsive(lg) {
       padding: 20px;
       border-width: 2px;
     }
@@ -103,7 +103,7 @@
         max-height: 52px;
       }
 
-      @include responsive(md) {
+      @include responsive(lg) {
         max-width: 32px;
         max-height: 32px;
       }
@@ -165,7 +165,7 @@
       font-size: 16px;
     }
 
-    @include responsive(md) {
+    @include responsive(lg) {
       width: 100%;
     }
   }
@@ -180,7 +180,7 @@
         display: none;
       }
 
-      @include responsive(md) {
+      @include responsive(lg) {
         display: block;
       }
     }

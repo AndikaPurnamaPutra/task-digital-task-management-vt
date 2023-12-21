@@ -12,7 +12,7 @@
       padding-top: 120px;
       padding-bottom: 250px;
 
-      @include responsive(md) {
+      @include responsive(lg) {
         padding-top: 60px;
       }
 
@@ -25,7 +25,7 @@
           @include flex(row, center, flex-start);
           gap: 40px;
 
-          @include responsive(md) {
+          @include responsive(lg) {
             @include flex(column, flex-start, flex-start);
             gap: 24px;
           }
@@ -34,7 +34,7 @@
             color: $white;
             max-width: 400px;
 
-            @include responsive(md) {
+            @include responsive(lg) {
               max-width: 100%;
             }
           }
@@ -51,7 +51,7 @@
       gap: 40px;
       margin-top: -300px;
 
-      @include responsive(md) {
+      @include responsive(lg) {
         @include flex(column, center, space-between);
         gap: 60px;
       }
@@ -67,7 +67,7 @@
         &-price {
           @include flex(column, null, space-between);
           gap: 24px;
-          background-color: $white;
+          background-color: #F5F7FE;
           padding: 100px 48px 48px;
 
           @include responsive(xl) {
@@ -165,7 +165,7 @@
             max-width: 104px;
           }
 
-          @include responsive(md) {
+          @include responsive(lg) {
             max-width: 90px;
           }
 

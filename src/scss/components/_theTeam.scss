@@ -1,7 +1,7 @@
 .section-theTeam {
   padding-block: 120px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 60px;
   }
 
@@ -26,7 +26,7 @@
             &-text {
               @include flex(row, center, space-between);
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 @include flex(column, flex-start, space-between);
                 gap: 24px;
               }
@@ -35,7 +35,7 @@
                 @include flex(row, center, space-between);
                 gap: 24px;
 
-                @include responsive(md) {
+                @include responsive(lg) {
                   width: 100%;
                 }
               }
@@ -46,7 +46,7 @@
           .wrapper {
             @include flex(row, center, space-between);
 
-            @include responsive(md) {
+            @include responsive(lg) {
               justify-content: flex-start;
               flex-wrap: wrap;
               gap: 24px;

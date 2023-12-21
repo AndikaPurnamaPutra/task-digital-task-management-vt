@@ -2,7 +2,7 @@
   background-color: $gray;
   padding-top: 200px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-top: 100px;
   }
   
@@ -16,7 +16,7 @@
           @include flex(column, null, space-between);
           gap: 22px;
 
-          @include responsive(md) {
+          @include responsive(lg) {
             padding-bottom: 60px;
           }
 
@@ -33,7 +33,7 @@
           padding: 30px 70px;
           @include flex(row, center, space-between);
 
-          @include responsive(md) {
+          @include responsive(lg) {
             padding: 20px 40px;
           }
 
@@ -55,7 +55,7 @@
             img {
               max-width: 125px;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 max-width: 100px;
               }
             }

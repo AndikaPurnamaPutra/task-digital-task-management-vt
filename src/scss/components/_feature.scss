@@ -1,7 +1,7 @@
 .section-feature {
   padding-block: 120px;
 
-  @include responsive(md) {
+  @include responsive(lg) {
     padding-block: 60px;
   }
 
@@ -30,7 +30,7 @@
         &-bottom {
           display: flex;
 
-          @include responsive(md) {
+          @include responsive(lg) {
             flex-direction: column;
           }
 
@@ -71,7 +71,7 @@
                     padding: 12px 13px;
                   }
 
-                  @include responsive(md) {
+                  @include responsive(lg) {
                     font-size: 16px;
                   }
                 }
@@ -98,7 +98,7 @@
             .btn-primary {
               padding-inline: 25px;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 padding: 0;
                 color: $black;
               }
@@ -110,7 +110,7 @@
               bottom: -206px;
               width: 130%;
 
-              @include responsive(md) {
+              @include responsive(lg) {
                 position: relative;
                 left: 0;
                 bottom: 0;
